@@ -1,0 +1,11 @@
+{
+  "port": 8000,
+  "server": {
+    "baseDir": "public",
+    "directory": true,
+    "routes": {
+      "/libs": "bower_components"
+    }
+  },
+  "serveStatic": ["./public"]
+}

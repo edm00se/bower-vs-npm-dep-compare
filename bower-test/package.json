@@ -4,11 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "post-install": "bower install",
+    "build-js": "cp public/js/app.js public/js/app.js",
+    "build-sass": "node-sass public/sass/main.scss public/css/app.css",
+    "build-vendor-js": "rm js/vendor.js; touch js/vendor.js; IFS=$'\n'; for f in $(bower-files js); do cat \"$f\" >> js/vendor.js; done",
+    "build-vendor-min-js": "cat js/vendor.js | uglifyjs -o public/js/vendor.min.js",
+    "build-min-js": "cat js/app.js | uglifyjs -o public/js/app.min.js",
+    "build-min-sass": "node-sass public/sass/main.scss | cleancss -o public/css/main.min.css",
+    "watch-js": "nodemon -e js -w public/js -x 'npm run build-vendor-js & npm run build-vendor-min-js & npm run build-js & npm run build-min-js'",
+    "watch-sass": "nodemon -e scss -w public/sass -x 'npm run build-sass & npm run build-min-sass'",
+    "build": "npm run build-vendor-js & npm run build-vendor-min-js & npm run build-js & npm run build-min-js & npm run build-sass & npm run build-min-sass",
+    "watch": "npm run watch-js & npm run watch-sass",
+    "serve": "npm run watch & lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Eric McCormick",
   "license": "MIT",
   "devDependencies": {
-    "bower": "1.7.9"
+    "bower": "1.7.9",
+    "bower-files": "3.13.1",
+    "clean-css": "3.4.17",
+    "lite-server": "2.2.0",
+    "node-sass": "3.7.0",
+    "nodemon": "1.9.2",
+    "uglifyjs": "2.4.10"
   }
 }
