@@ -10,7 +10,7 @@ This project makes use of a single, simple `index.html` with jQuery and Bootstra
 
 ### Why Not Grunt/Gulp/Other?
 
-I like grunt and love gulp and I use both frequently, but seeing how I neither wanted to distracted from the task at hand nor make anything more confusing with different configs for a task runner, I decited to use a more purist ["npm build pipeline"](https://css-tricks.com/why-npm-scripts/), in which the build steps are all defined as `npm run ...` scripts, with superceding main scripts to do the joint operations. I mostly adapted my `npm run` scripts [from this nice article on "npm for everything"](http://beletsky.net/2015/04/npm-for-everything.html); which, coincidentally, is good reading material for the subject of this project.
+I like grunt and love gulp and I use both frequently, but seeing how I neither wanted to distract from the task at hand nor make anything more confusing with different configs for a task runner, I decited to use a more purist ["npm build pipeline"](https://css-tricks.com/why-npm-scripts/), in which the build steps are all defined as `npm run ...` scripts, with superceding main scripts to do the joint operations. I mostly adapted my `npm run` scripts [from this nice article on "npm for everything"](http://beletsky.net/2015/04/npm-for-everything.html); which, coincidentally, is good reading material for the subject of this project.
 
 ### To Use
 
