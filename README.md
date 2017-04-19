@@ -4,7 +4,7 @@ This repository is a basic comparison between a simple "hello world" style web s
 
 ## Bower vs NPM
 
-This isn't my main discussion regarding the approach of  bower vs npm, for package management. For that, you can [go check it out on my blog]().
+~~This isn't my main discussion regarding the approach of  bower vs npm, for package management. For that, you can [go check it out on my blog](#).~~
 
 This project makes use of a single, simple `index.html` with jQuery and Bootstrap 3, with a sass file, for demonstrative purposes.
 
